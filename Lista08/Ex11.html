@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="select" id="tabuada">
+        <option value="2">Tabuada 2</option>
+        <option value="3">Tabuada 3</option>
+        <option value="4">Tabuada 4</option>
+        <option value="5">Tabuada 5</option>
+        <option value="6">Tabuada 6</option>
+        <option value="7">Tabuada 7</option>
+        <option value="8">Tabuada 8</option>
+        <option value="9">Tabuada 9</option>
+    </select>
+
+    <button onclick="ver()">Ver tabuada</button>
+
+    <div id="resultado"></div><br>
+</body>
+<script>
+    function ver() {
+        let opcao = Number(tabuada.value);
+        let count = 1;
+
+        while (count <= 12){
+            count % 2 == 0 ? resultado.innerHTML += `<p style="color: blue;">${opcao} x ${count} = ${opcao*count}</p>` 
+            : resultado.innerHTML += `<p style="color: red;">${opcao} x ${count} = ${opcao*count}</p>`;
+            
+            count++;
+        }
+    }
+</script>
+
+</html>

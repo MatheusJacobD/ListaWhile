@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num" placeholder="Voltas">
+    <button onclick="iniciar()">Iniciar corrida</button>
+
+    <div id="resultado"></div><br>
+</body>
+<script>
+    function iniciar(){
+        let numero = Number(num.value);
+        let count = 1;
+
+        while(count <= numero){
+            resultado.innerHTML += `Carro dando a ${count}º volta<br>`;
+
+            count++;
+        }
+
+        resultado.innerHTML += `Corrida finalizada!`;
+    }
+</script>
+</html>
